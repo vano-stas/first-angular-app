@@ -16,7 +16,6 @@ myApp.controller('ButtonController', function($scope, $http) {
   //       console.log('error')
   //     })
 
-
   $scope.testRequest = function() {
       console.log('work click');
       // fetch('https://swapi.co/api/people')
@@ -24,18 +23,20 @@ myApp.controller('ButtonController', function($scope, $http) {
       // .then(data => console.log(data));
 
       
-
-      fetch('https://postman-echo.com/get?foo1=bar1&foo2=bar2', {
-        mode: 'no-cors',
+      fetch('https://cors-anywhere.herokuapp.com/https://postman-echo.com/get?foo1=bar1&foo2=bar2', {
+      // fetch('https://postman-echo.com/get?foo1=bar1&foo2=bar2', {
+        // mode: 'no-cors',
+        mode: 'cors',
         headers: {
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': '*',
+
         }
       })
       .then(function(response) {
-        return response
+        return response.json()
       })
       .then(data => {
-        console.log(data);
+        console.log(data.args);
       })
   };
 });
