@@ -220,7 +220,6 @@ npm run update-index-async
 This will copy the contents of the `angular-loader.js` library file into the `index-async.html`
 page. You can run this every time you update the version of AngularJS that you are using.
 
-
 ## Serving the Application Files
 
 While AngularJS is client-side-only technology and it is possible to create AngularJS web apps that
@@ -261,7 +260,6 @@ If your AngularJS app is talking to the backend server via XHR or other means, y
 out what is the best way to host the static files to comply with the same origin policy if
 applicable. Usually this is done by hosting the files by the backend server or through
 reverse-proxying the backend server(s) and web server(s).
-
 
 ## Continuous Integration
 
